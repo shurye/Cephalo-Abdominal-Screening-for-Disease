@@ -5,9 +5,9 @@ body {
 }
 
 .choice {
-  display: block;             /* ให้กินทั้งบรรทัด */
-  width: 35%;                 /* หรือ 100%, ตามความเหมาะสม */
-  margin: 10px auto;          /* จัดให้อยู่กลาง */
+  display: block;            
+  width: 50%;                
+  margin: 10px auto;       
   padding: 10px 20px;
   border: 1px solid #aaa;
   border-radius: 10px;
@@ -34,3 +34,4 @@ button {
 button:hover {
   background-color: #21867a;
 }
+
