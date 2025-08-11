@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.choice {
+  display: block;             /* ให้กินทั้งบรรทัด */
+  width: 35%;                 /* หรือ 100%, ตามความเหมาะสม */
+  margin: 10px auto;          /* จัดให้อยู่กลาง */
+  padding: 10px 20px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.choice:hover {
+  background-color: #7ce678;
+  color: #333;
+  transition: 0.2s;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #854062;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #21867a;
+}
