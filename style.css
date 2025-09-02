@@ -1,4 +1,5 @@
- {
+/* Reset เบื้องต้น */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,6 +15,7 @@ body {
   min-height: 100vh;
 }
 
+/* หัวข้อคำถาม */
 h2#question {
   font-size: 2rem;
   font-weight: 700;
@@ -21,6 +23,7 @@ h2#question {
   color: #1e3a8a;
 }
 
+/* คำอธิบายใต้คำถาม */
 #description {
   font-style: italic;
   color: #555;
@@ -28,6 +31,7 @@ h2#question {
   font-size: 1.1rem;
 }
 
+/* กล่องตัวเลือก */
 .choice {
   display: block;
   max-width: 500px;
@@ -52,6 +56,7 @@ h2#question {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+/* ผลลัพธ์ */
 #result {
   font-weight: bold;
   font-size: 1.25rem;
@@ -66,6 +71,7 @@ h2#question {
   animation: fadeIn 0.5s ease;
 }
 
+/* ปุ่ม */
 button {
   margin-top: 30px;
   padding: 14px 28px;
@@ -85,6 +91,7 @@ button:hover {
   transform: translateY(-2px);
 }
 
+/* เอฟเฟกต์แสดงผล */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
