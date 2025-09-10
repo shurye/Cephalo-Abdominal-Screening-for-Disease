@@ -737,12 +737,17 @@ function showQuestion(id) {
 // ฟังก์ชันกดย้อนกลับ
 document.getElementById("backBtn").onclick = () => {
   if (userAnswers.length > 0) {
-    userAnswers.pop(); // ลบคำตอบล่าสุด
-    const prev = userAnswers.length > 0
-      ? userAnswers[userAnswers.length - 1].questionId
-      : "q1"; // ถ้าไม่มีเหลือ ให้กลับไป q1
-    showQuestion(prev);
+    // เอาคำตอบล่าสุดออก
+    const lastAnswer = userAnswers.pop();
+
+    // กลับไปยังคำถามที่เลือกก่อนหน้านี้ (แค่ 1 ขั้น)
+    showQuestion(lastAnswer.questionId);
+  } else {
+    // ถ้าไม่มีคำตอบใน stack ให้กลับไป q1
+    showQuestion("q1");
   }
 };
 
+
 showQuestion(currentQuestion);
+
