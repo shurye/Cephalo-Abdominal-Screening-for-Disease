@@ -16,6 +16,7 @@ const quizData = {
   // ปวดท้องธรรมดา
   q_one: {
     question: "ปวดบิดเป็นพัก ๆ ?",
+    description: "ปวดท้องบิด= ปวดท้องบีบ ๆ เป็นพัก ๆ เหมือนตอนท้องเสียหรือปวดอุจจาระ",
     choices: {
       A: { text: "ใช่", next: "q2_1" },
       B: { text: "ไม่", next: "q3" }
@@ -99,7 +100,7 @@ const quizData = {
     question: "ปวดแสบปวดร้อนอยู่แถบหนึ่ง ?",
     choices: {
       A: { text: "ใช่", next: "result188_1" },
-      B: { text: "ไม่", next: "q1" }
+      B: { text: "ไม่", next: "resultfinal" }
     }
   },
 
@@ -188,9 +189,10 @@ const quizData = {
 
   q_two5: {
     question: "ไข้สูงตลอดเวลา ? และ ทดสอบทูร์นิเคต์ให้ผลบวก ?",
+    description : "ทูร์นิเคต์ (Tourniquet test) : เป็นการตรวจที่ทำได้ยากและไม่สามารถทำเองที่บ้านได้ ส่วนใหญ่ต้องให้พยาบาลหรือแพทย์เป็นผู้ตรวจ ดังนั้นหากไปโรงพยาบาลจะสามารถทราบผลจากการตรวจนี้ได้ทันที",
     choices: {
       A: { text: "ใช่", next: "result225" },
-      B: { text: "ไม่", next: "q1"}
+      B: { text: "ไม่", next: "resultfinal"}
     }
   },
 
@@ -253,7 +255,7 @@ const quizData = {
     question: "มีอาการมากกว่า 12 สัปดาห์ในช่วงเวลา 12 เดือนที่ผ่านมาหรือมีความเครียด วิตกกังวล นอนไม่หลับ ?",
     choices: {
       A: { text: "ใช่", next: "result88" },
-      B: { text: "ไม่", next: "q1"}
+      B: { text: "ไม่", next: "resultfinal"}
     }
   },
 
@@ -304,6 +306,7 @@ const quizData = {
   },
   q_four3: {
     question: "ปวดบิดเป็นพัก ๆ ?",
+    description: "ปวดท้องบิด= ปวดท้องบีบ ๆ เป็นพัก ๆ เหมือนตอนท้องเสียหรือปวดอุจจาระ",
     choices: {
       A: { text: "ใช่", next: "q_four3_1" },
       B: { text: "ไม่", next: "q_four4"}
@@ -355,7 +358,7 @@ const quizData = {
     question: "มีความเครียด วิตกกังวล ซึมเศร้า หรือนอนไม่หลับ ?",
     choices: {
       A: { text: "ใช่", next: "result88" },
-      B: { text: "ไม่", next: "q1"}
+      B: { text: "ไม่", next: "resultfinal"}
     }
   },
 
@@ -403,7 +406,7 @@ const quizData = {
     question: "มีไข้และถ่ายเป็นน้ำนำมาก่อน ?",
     choices: {
       A: { text: "ใช่", next: "result36_1" },
-      B: { text: "ไม่", next: "q1"}
+      B: { text: "ไม่", next: "resultfinal"}
     }
   },
 
@@ -491,9 +494,10 @@ const quizData = {
 
   q_six4: {
     question: "ปวดบิดเป็นพัก ๆ ?",
+    description: "ปวดท้องบิด= ปวดท้องบีบ ๆ เป็นพัก ๆ เหมือนตอนท้องเสียหรือปวดอุจจาระ",
     choices: {
       A: { text: "ใช่", next: "q_six4_1" },
-      B: { text: "ไม่", next: "q1"}
+      B: { text: "ไม่", next: "resultfinal"}
     }
   },
   q_six4_1: {
@@ -514,7 +518,7 @@ const quizData = {
     question: "ปวดเวลามีประจำเดือน ?",
     choices: {
       A: { text: "ใช่", next: "q_six4_3_1" },
-      B: { text: "ไม่", next: "q1"}
+      B: { text: "ไม่", next: "resultfinal"}
     }
   },
   q_six4_3_1: {
@@ -527,7 +531,7 @@ const quizData = {
 
 //ท้องเดิน
   q_seven: {
-    question: "มีภาวะขาดน้ำรุนแรง หรือ ช็อก?",
+    question: "Severe dehydration or shock?",
     choices: {
       A: { text: "ใช่", next: "result32" },
       B: { text: "ไม่", next: "q_seven2"}
@@ -564,6 +568,8 @@ const quizData = {
   },
   q_seven3_3: {
     question: "ปวดบิดเป็นพัก ๆ หรือ อาเจียน ?",
+    description: "ปวดท้องบิด= ปวดท้องบีบ ๆ เป็นพัก ๆ เหมือนตอนท้องเสียหรือปวดอุจจาระ",
+
     choices: {
       A: { text: "ใช่", next: "result34_1" },
       B: { text: "ไม่", next: "q_seven3_2" }
@@ -595,6 +601,8 @@ const quizData = {
 
   q_seven7: {
     question: "ปวดบิดท้องเป็นพัก ๆ อาเจียน ถ่ายรุนแรง หรือ เป็นพร้อมกันหลายคน?",
+    description: "ปวดท้องบิด= ปวดท้องบีบ ๆ เป็นพัก ๆ เหมือนตอนท้องเสียหรือปวดอุจจาระ",
+
     choices: {
       A: { text: "ใช่", next: "q_seven7_1" },
       B: { text: "ไม่", next: "q_seven8" }
@@ -618,7 +626,7 @@ const quizData = {
     question: "เป็นหลังกินยาถ่าย ยาต้านกรด ยาปฎิชีวนะ หรือยาอื่น ๆ ?",
     choices: {
       A: { text: "ใช่", next: "result_medi" },
-      B: { text: "ไม่", next: "q1" }
+      B: { text: "ไม่", next: "resultfinal" }
     }
   },
 
@@ -653,7 +661,7 @@ const results = {
   
   result224: "มาราเรีย/ไทฟอยด์",
   result225: "ไข้เลือดออก",
-  result237_13: "มะเร็งลำไส้ใหญ่",
+  result237_13: "พบความผิดปกติที่อาจสัมพันธ์กับโรคเรื้อรังหรือโรคสำคัญ ควรเข้ารับการตรวจเพิ่มเติมโดยแพทย์",
   result58: "ริดสีดวงทวาร" ,
   result58_1: "แผลปริที่ทวารหนัก",
   result51: "ท้องผูกจากการกินยา",
@@ -661,6 +669,8 @@ const results = {
   result250: "ปวดประจำเดือน",
   result230: "โรคพยาธิไส้เดือน",
   result220: "ตะกั่วเป็นพิษ",
+
+  result327_13: "พบความผิดปกติที่อาจสัมพันธ์กับโรคเรื้อรังหรือโรคสำคัญ ควรเข้ารับการตรวจเพิ่มเติมโดยแพทย์",
 
   result54_1: "ลำไส้กลืนกันเอง",
   result36_1_2: "บิดชิเกลลา/บิดอะมีบา",
@@ -687,8 +697,9 @@ const results = {
   result219_2: "พิษปลาทะเล/พิษหอยทะเล",
   result34_1_1: "อาหารเป็นพิษจากเชื้อโรค",
 
-};
 
+  resultfinal: "หากมีอาการปวดท้องต่อเนื่อง ควรดูแลอาการเบื้องต้นโดยบุคลากรทางการแพทย์"
+};
 
 let currentQuestion = "q1";
 let userAnswers = [];
@@ -707,7 +718,7 @@ function showQuestion(id) {
   descEl.innerHTML = "";
 
   if (id.startsWith("result")) {
-    questionEl.innerHTML = "โรคที่ตรวจพบ :";
+    questionEl.innerHTML = "มีภาวะเสี่ยงเป็น :";
     resultEl.innerHTML = results[id];
     backBtn.style.display = userAnswers.length > 0 ? "inline-block" : "none";
     footer.style.display = "block";   // ✅ แสดง footer
