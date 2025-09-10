@@ -164,7 +164,7 @@ const quizData = {
     }
   },
   q_two2_3: {
-    question: "ปวดตรงท้องน้อยในผู้หญิง และ ตกข้าวมีกลิ่น ?",
+    question: "ปวดตรงท้องน้อยในผู้หญิง และ ตกขาวมีกลิ่น ?",
     choices: {
       A: { text: "ใช่", next: "result147" },
       B: { text: "ไม่", next: "resultNon"}
@@ -531,7 +531,7 @@ const quizData = {
 
 //ท้องเดิน
   q_seven: {
-    question: "Severe dehydration or shock?",
+    question: "มีภาวะขาดน้ำรุนแรง หรือ ช็อก?",
     choices: {
       A: { text: "ใช่", next: "result32" },
       B: { text: "ไม่", next: "q_seven2"}
@@ -655,7 +655,7 @@ const results = {
   result137: "กรวยไตอักเสบเฉียบพลัน",
   result147: "ปีกมดลูกอักเสบ/เยื่อบุมดลูกอักเสบ",
 
-  resultNon: "อาจมีสาเหตุที่ร้ายแรงอื่น ๆ",
+  resultNon: "หากมีอาการปวดท้องต่อเนื่อง ควรดูแลอาการเบื้องต้นโดยบุคลากรทางการแพทย์",
   resultNon_2 : "รักษาตามอาการ",
   result_medi : "สาเหตุจากยา",
   
@@ -718,7 +718,7 @@ function showQuestion(id) {
   descEl.innerHTML = "";
 
   if (id.startsWith("result")) {
-    questionEl.innerHTML = "มีภาวะเสี่ยงเป็น :";
+    questionEl.innerHTML = "โรคที่ตรวจพบ :";
     resultEl.innerHTML = results[id];
     backBtn.style.display = userAnswers.length > 0 ? "inline-block" : "none";
     footer.style.display = "block";   // ✅ แสดง footer
