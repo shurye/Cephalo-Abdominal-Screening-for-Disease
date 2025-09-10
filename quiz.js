@@ -689,14 +689,18 @@ const results = {
 
 };
 
+
 let currentQuestion = "q1";
 let userAnswers = [];
-
 function showQuestion(id) {
   const container = document.getElementById("choices");
   const questionEl = document.getElementById("question");
   const descEl = document.getElementById("description");
   const resultEl = document.getElementById("result");
+  const backBtn = document.getElementById("backBtn");
+  const footer = document.getElementById("footer");
+
+  
 
   container.innerHTML = "";
   resultEl.innerHTML = "";
@@ -705,14 +709,15 @@ function showQuestion(id) {
   if (id.startsWith("result")) {
     questionEl.innerHTML = "โรคที่ตรวจพบ :";
     resultEl.innerHTML = results[id];
-
-    // เก็บข้อมูลเหมือนเดิม...
+    backBtn.style.display = userAnswers.length > 0 ? "inline-block" : "none";
+    footer.style.display = "block";   // ✅ แสดง footer
     return;
   }
 
   const q = quizData[id];
+  currentQuestion = id;
   questionEl.innerHTML = q.question;
-  descEl.innerHTML = q.description || ""; // แสดง description ถ้ามี
+  descEl.innerHTML = q.description || "";
 
   for (const key in q.choices) {
     const btn = document.createElement("div");
@@ -724,8 +729,20 @@ function showQuestion(id) {
     };
     container.appendChild(btn);
   }
+
+  backBtn.style.display = userAnswers.length > 0 ? "inline-block" : "none";
+  footer.style.display = "none";  // ❌ ซ่อน footer ตอนที่ยังไม่ใช่ result
 }
 
-
+// ฟังก์ชันกดย้อนกลับ
+document.getElementById("backBtn").onclick = () => {
+  if (userAnswers.length > 0) {
+    userAnswers.pop(); // ลบคำตอบล่าสุด
+    const prev = userAnswers.length > 0
+      ? userAnswers[userAnswers.length - 1].questionId
+      : "q1"; // ถ้าไม่มีเหลือ ให้กลับไป q1
+    showQuestion(prev);
+  }
+};
 
 showQuestion(currentQuestion);
