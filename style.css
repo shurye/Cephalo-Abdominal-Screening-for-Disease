@@ -1,10 +1,11 @@
-/* Reset เบื้องต้น */
+/* 🌟 Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 🌟 Body */
 body {
   font-family: "Prompt", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #f0f6ff, #e6ecf3);
@@ -15,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-/* หัวข้อคำถาม */
+/* 🌟 Question Section */
 h2#question {
   font-size: 2rem;
   font-weight: 700;
@@ -23,7 +24,6 @@ h2#question {
   color: #1e3a8a;
 }
 
-/* คำอธิบายใต้คำถาม */
 #description {
   font-style: italic;
   color: #555;
@@ -31,7 +31,7 @@ h2#question {
   font-size: 1.1rem;
 }
 
-/* กล่องตัวเลือก */
+/* 🌟 Choice Buttons */
 .choice {
   display: block;
   max-width: 500px;
@@ -56,22 +56,45 @@ h2#question {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* ผลลัพธ์ */
+/* 🌟 Back Button */
+#backBtn {
+  display: block;
+  margin: 14px auto 30px;
+  padding: 12px 25px;
+  border: none;
+  background: linear-gradient(135deg, #6b7280, #374151);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+#backBtn:hover {
+  background: linear-gradient(135deg, #4b5563, #1f2937);
+  transform: translateY(-2px);
+}
+
+/* 🌟 Result Section */
 #result {
+  display: block;
+  max-width: 720px;
+  margin: 30px auto 10px;
+  padding: 18px 25px;
   font-weight: bold;
   font-size: 1.25rem;
-  margin-top: 30px;
-  padding: 18px 25px;
   color: #1e3a8a;
   background: linear-gradient(135deg, #f0f9ff, #dbeafe);
   border: 1px solid #c7d2fe;
   border-radius: 12px;
-  display: inline-block;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease;
+  text-align: center;
 }
 
-/* ปุ่ม */
+/* 🌟 General Buttons */
 button {
   margin-top: 30px;
   padding: 14px 28px;
@@ -91,8 +114,30 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* เอฟเฟกต์แสดงผล */
+/* 🌟 Footer */
+footer {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 1.1rem;
+  color: #444;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: #fff;
+  padding: 6px 10px;
+}
+
+footer p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* 🌟 Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
