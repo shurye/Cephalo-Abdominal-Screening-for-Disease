@@ -209,7 +209,7 @@ const quizData = {
     question: "น้ำหนักลดฮวบ หรือ มีอาการท้องผูกสลับท้องเดินเป็น ๆ หาย ๆ นานกว่า 1 เดือน ?",
     choices: {
       A: { text: "ใช่", next: "result237_13" },
-      B: { text: "ไม่", next: "q_three1"}
+      B: { text: "ไม่", next: "q_three2"}
     }
   },
 
@@ -414,8 +414,8 @@ const quizData = {
   q_six: {
     question: "ปวดที่บริเวณใต้สะดือลงมา ?",
     choices: {
-      A: { text: "ใช่", next: "q_one" },
-      B: { text: "ไม่", next: "q_six2"}
+      A: { text: "ใช่", next: "q_six2" },
+      B: { text: "ไม่", next: "q_one"}
     }
   },
 
@@ -572,7 +572,7 @@ const quizData = {
 
     choices: {
       A: { text: "ใช่", next: "result34_1" },
-      B: { text: "ไม่", next: "q_seven3_2" }
+      B: { text: "ไม่", next: "q_seven4" }
     }
   },
   q_seven4: {
@@ -677,6 +677,7 @@ const results = {
   result36_2 : "บิดอะมีบา",
   result36_1: "บิดชิเกลลา",
   result234: "โรคพยาธิแส้ม้า/บิดชิเกลลา",
+  result32_2: "ท้องเดินจากเชื้อไกอาร์เดีย",
   
   result46_147: "ไส้ติ่งอักเสบ / ปีกมดลูกอักเสบ",
   result156: "แท้งบุตร",
@@ -742,22 +743,26 @@ function showQuestion(id) {
   }
 
   backBtn.style.display = userAnswers.length > 0 ? "inline-block" : "none";
-  footer.style.display = "none";  // ❌ ซ่อน footer ตอนที่ยังไม่ใช่ result
+  footer.style.display = "none";  
 }
 
-// ฟังก์ชันกดย้อนกลับ
 document.getElementById("backBtn").onclick = () => {
-  if (userAnswers.length > 0) {
-    // เอาคำตอบล่าสุดออก
-    const lastAnswer = userAnswers.pop();
+  const questionEl = document.getElementById("question");
 
-    // กลับไปยังคำถามที่เลือกก่อนหน้านี้ (แค่ 1 ขั้น)
+  if (questionEl.innerHTML === "โรคที่ตรวจพบ :") {
+    userAnswers = []; 
+    showQuestion("q1");
+    return;
+  }
+
+  if (userAnswers.length > 0) {
+    const lastAnswer = userAnswers.pop();
     showQuestion(lastAnswer.questionId);
   } else {
-    // ถ้าไม่มีคำตอบใน stack ให้กลับไป q1
     showQuestion("q1");
   }
 };
+
 
 
 showQuestion(currentQuestion);
